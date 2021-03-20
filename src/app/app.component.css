@@ -1,0 +1,160 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* get started section */
+section.get-started {
+  height: 850px;
+  background: url("../assets/img/photo-couch.jpg") no-repeat top;
+  background-size: cover;
+  position: relative;
+}
+section.get-started.tablet {
+  height: 600px;
+}
+section.get-started.mobile {
+  height: 375px;
+}
+
+.get-started--content {
+  position: absolute;
+  bottom: 75px;
+  left: var(--margin);
+  color: var(--text-light);
+  font-weight: 300;
+}
+section.get-started.tablet .get-started--content {
+  bottom: 25px;
+  left: var(--margin-tablet);
+}
+section.get-started.mobile .get-started--content {
+  bottom: 10px;
+  left: var(--margin-mobile);
+}
+
+.get-started--header-small {
+  font-weight: 300;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+section.get-started.mobile .get-started--header-small {
+  font-size: 18px;
+}
+.get-started--header-large {
+  margin: 0;
+  font-weight: 300;
+  font-size: 56px;
+}
+section.get-started.mobile .get-started--header-large {
+  font-size: 36px;
+}
+
+.get-started--description {
+  width: 460px;
+  font-size: 20px;
+  margin-bottom: 50px;
+  line-height: 1.4;
+}
+section.get-started.tablet .get-started--description {
+  width: 400px;
+}
+section.get-started.mobile .get-started--description {
+  width: 280px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+button.get-started--btn {
+  background-color: var(--primary);
+  color: var(--text-primary);
+  text-transform: uppercase;
+  padding: 10px 35px;
+  border: none;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background-color 0.5s;
+}
+button.get-started--btn:hover {
+  cursor: pointer;
+}
+button.get-started--btn:hover,
+button.get-started--btn:active {
+  background-color: var(--primary-dark);
+  transition: background-color 0.5s;
+}
+button.get-started--btn:focus {
+  outline: none;
+}
+section.get-started.mobile button.get-started--btn {
+  padding: 5px 20px;
+  font-size: 14px;
+}
+
+/* How it works section */
+section.how-it-works {
+  margin: 10px var(--margin) 75px;
+}
+section.how-it-works.tablet {
+  margin: 10px var(--margin-tablet) 75px;
+}
+section.how-it-works.mobile {
+  margin: 10px 0 75px;
+}
+
+.how-it-works--title {
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 28px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+}
+
+section.how-it-works.mobile .steps {
+  flex-direction: column;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 8px;
+  min-width: 250px;
+}
+section.how-it-works.tablet .step {
+  min-width: 210px;
+}
+
+.step-number {
+  font-weight: 400;
+  font-size: 3rem;
+  padding-bottom: 4px;
+  border-bottom: 4px solid var(--primary);
+}
+
+.step-title {
+  margin-bottom: 0;
+}
+section.how-it-works.tablet .step-title {
+  font-size: 14px;
+}
+
+.step-details {
+  text-align: center;
+  max-width: 300px;
+  padding: 0 8px;
+  line-height: 1.4;
+}

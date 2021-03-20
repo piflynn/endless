@@ -1,0 +1,21 @@
+/* header */
+header {
+  display: flex;
+  background-color: var(--header-background);
+  padding-left: var(--margin);
+}
+header.tablet {
+  padding-left: var(--margin-tablet);
+}
+header.mobile {
+  padding-left: var(--margin-mobile);
+}
+
+img.img-brand {
+  margin: 16px 0;
+  height: 22px;
+}
+header.mobile img.img-brand {
+  margin: 10px 0;
+  height: 18px;
+}

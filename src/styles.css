@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* global fonts */
+@font-face {
+  font-family: Lato;
+  src: url("assets/font/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Lato;
+  src: url("assets/font/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Lato;
+  src: url("assets/font/Lato-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Lato;
+  src: url("assets/font/Lato-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+
+/* css vars */
+:root {
+  /* Colors */
+  --primary: #47e4c2;
+  --primary-dark: #00b192;
+  --text-primary: #2f3237;
+  --text-light: #fff;
+  --header-background: #222;
+  --background: #f2f1ef;
+
+  /* Sizses */
+  --margin: 250px;
+  --margin-tablet: 50px;
+  --margin-mobile: 20px;
+}
+
+/* global styles */
+html,
+body {
+  height: 100%;
+  background-color: var(--background);
+}
+body {
+  margin: 0;
+  font-family: Lato, sans-serif;
+  color: var(--text-primary);
+}
