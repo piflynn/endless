@@ -1,5 +1,11 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 
 import { Subject } from 'rxjs';
 import { filter, map, takeUntil } from 'rxjs/operators';
@@ -12,6 +18,7 @@ import { StepViewModel } from './models/step-view.model';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit, OnDestroy {
   mobile = false;
@@ -27,6 +34,7 @@ export class AppComponent implements OnInit, OnDestroy {
   );
 
   constructor(
+    private changeDetectorRef: ChangeDetectorRef,
     private breakpointObserver: BreakpointObserver,
     private dataService: DataService
   ) {}
@@ -40,8 +48,10 @@ export class AppComponent implements OnInit, OnDestroy {
       ])
       .pipe(takeUntil(this.destroy$))
       .subscribe((result) => {
+        console.log(result);
         this.mobile = result.breakpoints['(max-width: 900px)'];
         this.tablet = result.breakpoints['(max-width: 1439px)'];
+        this.changeDetectorRef.detectChanges();
       });
   }
   ngOnDestroy() {

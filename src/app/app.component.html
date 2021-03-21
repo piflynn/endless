@@ -16,7 +16,7 @@
   <section [ngClass]="{ mobile: mobile, tablet: tablet }" class="how-it-works">
     <h2 class="how-it-works--title">How It Works</h2>
     <div class="steps">
-      <div class="step" *ngFor="let step of steps$ | async; let i = index">
+      <div class="step" *ngFor="let step of steps$ | async">
         <span class="step-number">0{{ step.stepNumber }}</span>
         <h4 class="step-title">
           {{ step.title | uppercase }}
