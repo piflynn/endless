@@ -12,7 +12,11 @@ main {
 /* get started section */
 section.get-started {
   height: 850px;
-  background: url("../assets/img/photo-couch.jpg") no-repeat top;
+  background: image-set(
+      url("../assets/img/photo-couch.jpg") 1x,
+      url("../assets/img/photo-couch_2x.jpg") 2x
+    )
+    no-repeat top;
   background-size: cover;
   position: relative;
 }
