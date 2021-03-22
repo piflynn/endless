@@ -7,6 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Clone this repository locally. Checkout branch `master`.
 Run `npm install` from the project directory (the one with package.json).
 Run `ng serve` from the same place.
+Navigate Google Chrome to `http://localhost:4200`.
 
 ## Development server
 
