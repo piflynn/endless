@@ -1,0 +1,65 @@
+// how it works section
+.how-it-works {
+  margin: 10px var(--margin) 75px;
+  .how-it-works__header {
+    .how-it-works__title {
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 1px;
+      font-size: 28px;
+    }
+  }
+  .how-it-works__steps {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    .how-it-works__step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 8px;
+      min-width: 250px;
+      .how-it-works__step-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .how-it-works__step-number {
+          font-weight: 400;
+          font-size: 3rem;
+          padding-bottom: 4px;
+          border-bottom: 4px solid var(--primary);
+        }
+        .how-it-works__step-title {
+          margin-bottom: 0;
+        }
+      }
+      .how-it-works__step-details {
+        text-align: center;
+        max-width: 300px;
+        padding: 0 8px;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  &.tablet {
+    margin: 10px var(--margin-tablet) 75px;
+    .how-it-works__steps {
+      .how-it-works__step {
+        min-width: 210px;
+        .how-it-works__step-header {
+          .how-it-works__step-title {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  &.mobile {
+    margin: 10px 0 75px;
+    .how-it-works__steps {
+      flex-direction: column;
+    }
+  }
+}

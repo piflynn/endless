@@ -8,35 +8,22 @@ import {
 } from '@angular/core';
 
 import { Subject } from 'rxjs';
-import { filter, map, takeUntil } from 'rxjs/operators';
-
-import { DataService } from './data.service';
-import { StepResponseModel } from './models/step-response.model';
-import { StepViewModel } from './models/step-view.model';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit, OnDestroy {
   mobile = false;
   tablet = false;
   destroy$ = new Subject();
-  steps$ = this.dataService.getSteps$().pipe(
-    filter((steps) => !!steps),
-    map((steps) =>
-      steps
-        .map(this.mapVersionContent)
-        .sort((a, b) => parseInt(a.stepNumber, 10) - parseInt(b.stepNumber, 10))
-    )
-  );
 
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
-    private breakpointObserver: BreakpointObserver,
-    private dataService: DataService
+    private breakpointObserver: BreakpointObserver
   ) {}
 
   ngOnInit() {
@@ -57,17 +44,5 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
-  }
-
-  // finds latest content from versionContent and maps to StepViewModel
-  private mapVersionContent(step: StepResponseModel): StepViewModel {
-    const content = step.versionContent.reduce((a, b) =>
-      new Date(a.effectiveDate) > new Date(b.effectiveDate) ? a : b
-    );
-    return {
-      stepNumber: step.stepNumber,
-      title: content.title,
-      body: content.body,
-    };
   }
 }

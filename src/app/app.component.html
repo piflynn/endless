@@ -1,28 +1,5 @@
 <app-header [tablet]="tablet" [mobile]="mobile"></app-header>
 <main>
-  <section [ngClass]="{ mobile: mobile, tablet: tablet }" class="get-started">
-    <div class="get-started--content">
-      <h4 class="get-started--header-small">New Games &amp; Accessories</h4>
-      <h1 class="get-started--header-large">Monthly packages.</h1>
-      <h1 class="get-started--header-large">Excitement delivered daily.</h1>
-      <p class="get-started--description">
-        What's the best way to shop for the latest video games and peripheals?
-        How about never shopping at all? You'll get new stuff on your doorstep
-        &mdash; every month.
-      </p>
-      <button class="get-started--btn">Get started</button>
-    </div>
-  </section>
-  <section [ngClass]="{ mobile: mobile, tablet: tablet }" class="how-it-works">
-    <h2 class="how-it-works--title">How It Works</h2>
-    <div class="steps">
-      <div class="step" *ngFor="let step of steps$ | async">
-        <span class="step-number">0{{ step.stepNumber }}</span>
-        <h4 class="step-title">
-          {{ step.title | uppercase }}
-        </h4>
-        <p class="step-details">{{ step.body }}</p>
-      </div>
-    </div>
-  </section>
+  <app-get-started [tablet]="tablet" [mobile]="mobile"></app-get-started>
+  <app-how-it-works [tablet]="tablet" [mobile]="mobile"></app-how-it-works>
 </main>

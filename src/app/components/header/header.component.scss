@@ -1,0 +1,20 @@
+/* header */
+header {
+  display: flex;
+  background-color: var(--header-background);
+  padding-left: var(--margin);
+  .img-brand {
+    margin: 16px 0;
+    height: 22px;
+  }
+  &.tablet {
+    padding-left: var(--margin-tablet);
+  }
+  &.mobile {
+    padding-left: var(--margin-mobile);
+    .img-brand {
+      margin: 10px 0;
+      height: 18px;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+// get started section
+.get-started {
+  height: 850px;
+  min-height: 375px;
+  background-image: url("../../../assets/img/photo-couch.jpg");
+  background-image: -webkit-image-set(
+    url("../../../assets/img/photo-couch.jpg") 1x,
+    url("../../../assets/img/photo-couch_2x.jpg") 2x
+  );
+  background: image-set(
+    url("../../../assets/img/photo-couch.jpg") 1x,
+    url("../../../assets/img/photo-couch_2x.jpg") 2x
+  );
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  .get-started__content {
+    position: absolute;
+    bottom: 75px;
+    left: var(--margin);
+    color: var(--text-light);
+    font-weight: 300;
+    .get-started__header {
+      .get-started__header--small {
+        font-weight: 300;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .get-started__header--large {
+        margin: 0;
+        font-weight: 300;
+        font-size: 56px;
+      }
+    }
+    .get-started__description {
+      width: 460px;
+      font-size: 20px;
+      margin-bottom: 50px;
+      line-height: 1.4;
+    }
+    .get-started__btn {
+      background-color: var(--primary);
+      color: var(--text-primary);
+      text-transform: uppercase;
+      padding: 10px 35px;
+      border: none;
+      border-radius: 50px;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: background-color 0.5s;
+      &:hover {
+        cursor: pointer;
+      }
+      &:hover,
+      &:active {
+        background-color: var(--primary-dark);
+        transition: background-color 0.5s;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &.tablet {
+    height: 600px;
+    .get-started__content {
+      bottom: 25px;
+      left: var(--margin-tablet);
+      .get-started__header {
+        .get-started__header--small {
+          font-weight: 300;
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        .get-started__header--large {
+          margin: 0;
+          font-weight: 300;
+          font-size: 56px;
+        }
+      }
+      .get-started__description {
+        width: 400px;
+      }
+    }
+  }
+  &.mobile {
+    height: 375px;
+    .get-started__content {
+      bottom: 10px;
+      left: var(--margin-mobile);
+      .get-started__header {
+        .get-started__header--small {
+          font-size: 18px;
+        }
+        .get-started__header--large {
+          font-size: 36px;
+        }
+      }
+      .get-started__description {
+        width: 280px;
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      .get-started__btn {
+        padding: 5px 20px;
+        font-size: 14px;
+      }
+    }
+  }
+}
