@@ -4,8 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Instructions
 
-Run `npm install` from the project directory (the one with package.json)
-Run `ng serve` from the same place
+Clone this repository locally. Checkout branch `master`.
+Run `npm install` from the project directory (the one with package.json).
+Run `ng serve` from the same place.
 
 ## Development server
 
