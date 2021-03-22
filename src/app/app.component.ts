@@ -35,9 +35,10 @@ export class AppComponent implements OnInit, OnDestroy {
       ])
       .pipe(takeUntil(this.destroy$))
       .subscribe((result) => {
-        console.log(result);
         this.mobile = result.breakpoints['(max-width: 900px)'];
-        this.tablet = result.breakpoints['(max-width: 1439px)'];
+        this.tablet =
+          result.breakpoints['(max-width: 1439px)'] &&
+          !result.breakpoints['(max-width: 900px)'];
         this.changeDetectorRef.detectChanges();
       });
   }

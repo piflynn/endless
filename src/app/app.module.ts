@@ -8,7 +8,12 @@ import { GetStartedComponent } from './components/get-started/get-started.compon
 import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, GetStartedComponent, HowItWorksComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    GetStartedComponent,
+    HowItWorksComponent,
+  ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

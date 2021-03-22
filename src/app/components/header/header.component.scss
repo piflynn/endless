@@ -1,11 +1,13 @@
-/* header */
-header {
+.header {
   display: flex;
   background-color: var(--header-background);
   padding-left: var(--margin);
   .img-brand {
     margin: 16px 0;
     height: 22px;
+    width: 152px;
+    max-width: 100%;
+    display: block;
   }
   &.tablet {
     padding-left: var(--margin-tablet);
@@ -15,6 +17,7 @@ header {
     .img-brand {
       margin: 10px 0;
       height: 18px;
+      width: 124px;
     }
   }
 }
